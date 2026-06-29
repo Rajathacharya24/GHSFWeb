@@ -29,6 +29,14 @@
 }
 
 /* === HOVER EFFECTS === */
+.brand-logo {
+  transition: transform 0.3s ease;
+}
+
+.brand:hover .brand-logo {
+  transform: scale(1.1) rotate(-3deg);
+}
+
 .button {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
