@@ -1,1 +1,84 @@
 /* premium.css — extended styles */
+
+/* === KEYFRAMES === */
+@keyframes heroReveal {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === HERO LOAD ANIMATION === */
+.hero-content {
+  animation: heroReveal 0.8s ease-out 0.2s both;
+}
+
+.quick-links {
+  animation: heroReveal 0.6s ease-out 0.5s both;
+}
+
+/* === SCROLL REVEAL === */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: calc(var(--i, 0) * 0.1s);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === HOVER EFFECTS === */
+.button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quick-links a {
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.quick-links a:hover {
+  background: #f0f5fb;
+  transform: translateY(-2px);
+}
+
+.life-grid div {
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.life-grid div:hover {
+  border-color: #1a5c44;
+  transform: scale(1.02);
+}
+
+.site-nav a {
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.notice-list article {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notice-list article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* === MOBILE NAV ANIMATION === */
+@media (max-width: 860px) {
+  .site-nav {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

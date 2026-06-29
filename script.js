@@ -92,3 +92,29 @@ if (statsSection) {
   observer.observe(statsSection);
 }
 
+// Scroll-triggered reveal animations with stagger
+const revealTargets = document.querySelectorAll(
+  '.section, .stats-band, .notice-list article, .life-grid div, .admission-steps div'
+);
+
+revealTargets.forEach(el => {
+  el.classList.add('reveal');
+  if (el.children.length) {
+    [...el.children].forEach((child, j) => {
+      child.classList.add('reveal');
+      child.style.setProperty('--i', j);
+    });
+  }
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
