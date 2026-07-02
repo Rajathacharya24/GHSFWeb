@@ -30,38 +30,40 @@
 
 /* === HOVER EFFECTS === */
 .brand-logo {
-  transition: transform 0.3s ease;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .brand:hover .brand-logo {
-  transform: scale(1.1) rotate(-3deg);
+  transform: scale(1.08) rotate(-6deg);
 }
 
 .button {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
 }
 
 .button:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
 }
 
 .quick-links a {
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: background 0.25s ease, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
 }
 
 .quick-links a:hover {
-  background: #f0f5fb;
-  transform: translateY(-2px);
+  background: #eef4fb;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(26, 92, 68, 0.08);
 }
 
 .life-grid div {
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.25s ease, transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
 }
 
 .life-grid div:hover {
   border-color: #1a5c44;
-  transform: scale(1.02);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(26, 92, 68, 0.08);
 }
 
 .site-nav a {
@@ -69,12 +71,12 @@
 }
 
 .notice-list article {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
 }
 
 .notice-list article:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
 /* === MOBILE NAV ANIMATION === */
